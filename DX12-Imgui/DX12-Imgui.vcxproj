@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e51e7ff3-ea65-424e-a53b-6cf54241bc00}</ProjectGuid>
+    <RootNamespace>DX12Imgui</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(SolutionDir)bin\$(Platform)_$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Src;$(ProjectDir)Src\GUI;$(ProjectDir)Src\Hooks;$(ProjectDir)Src\Utils;$(ProjectDir)Vendor;$(ProjectDir)Vendor\kiero;$(ProjectDir)Vendor\minhook;$(ProjectDir)Vendor\imgui;$(ProjectDir)Vendor\CppSDK;$(ProjectDir)Vendor\CppSDK\SDK;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\DLLMain.cpp" />
+    <ClCompile Include="Src\GUI\Gui.cpp" />
+    <ClCompile Include="Src\Hooks\D3D12Hook.cpp" />
+    <ClCompile Include="Vendor\imgui\imgui.cpp" />
+    <ClCompile Include="Vendor\imgui\imgui_demo.cpp" />
+    <ClCompile Include="Vendor\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Vendor\imgui\imgui_impl_dx10.cpp" />
+    <ClCompile Include="Vendor\imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Vendor\imgui\imgui_impl_dx12.cpp" />
+    <ClCompile Include="Vendor\imgui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="Vendor\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Vendor\imgui\imgui_tables.cpp" />
+    <ClCompile Include="Vendor\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Vendor\kiero\kiero.cpp" />
+    <ClCompile Include="Vendor\minhook\src\buffer.c" />
+    <ClCompile Include="Vendor\minhook\src\hde\hde32.c" />
+    <ClCompile Include="Vendor\minhook\src\hde\hde64.c" />
+    <ClCompile Include="Vendor\minhook\src\hook.c" />
+    <ClCompile Include="Vendor\minhook\src\trampoline.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\GUI\Gui.h" />
+    <ClInclude Include="Src\Hooks\D3D12Hook.h" />
+    <ClInclude Include="Src\Utils\Console.h" />
+    <ClInclude Include="Src\Utils\Logger.h" />
+    <ClInclude Include="Src\Includes.h" />
+    <ClInclude Include="Vendor\imgui\imconfig.h" />
+    <ClInclude Include="Vendor\imgui\imgui.h" />
+    <ClInclude Include="Vendor\imgui\imgui_impl_dx10.h" />
+    <ClInclude Include="Vendor\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="Vendor\imgui\imgui_impl_dx12.h" />
+    <ClInclude Include="Vendor\imgui\imgui_impl_dx9.h" />
+    <ClInclude Include="Vendor\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="Vendor\imgui\imgui_internal.h" />
+    <ClInclude Include="Vendor\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Vendor\imgui\imstb_textedit.h" />
+    <ClInclude Include="Vendor\imgui\imstb_truetype.h" />
+    <ClInclude Include="Vendor\kiero\kiero.h" />
+    <ClInclude Include="Vendor\minhook\include\MinHook.h" />
+    <ClInclude Include="Vendor\minhook\src\buffer.h" />
+    <ClInclude Include="Vendor\minhook\src\hde\hde32.h" />
+    <ClInclude Include="Vendor\minhook\src\hde\hde64.h" />
+    <ClInclude Include="Vendor\minhook\src\hde\pstdint.h" />
+    <ClInclude Include="Vendor\minhook\src\hde\table32.h" />
+    <ClInclude Include="Vendor\minhook\src\hde\table64.h" />
+    <ClInclude Include="Vendor\minhook\src\trampoline.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Vendor\minhook\dll_resources\MinHook.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Vendor\minhook\dll_resources\MinHook.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
