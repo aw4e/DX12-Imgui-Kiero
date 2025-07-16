@@ -7,7 +7,6 @@ namespace Gui
 
     void Shutdown()
     {
-        active_panel = Panel::GLOBAL;
         show_gui = true;
     }
 
